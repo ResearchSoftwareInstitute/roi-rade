@@ -7,4 +7,4 @@ RADE has three use cases under development:
 2. Predicting future community housing behavior values based on sea level rise scenarios and hazards assessments 
 3. Disease Vector Mapping
 
-The RADE Discovery Environment can be found [here].
+The development instance of the RADE Discovery Environment can be found [here](https://dsai-de-ui.edc.renci.org/de).
