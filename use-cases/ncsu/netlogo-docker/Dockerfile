@@ -17,6 +17,10 @@ RUN wget https://ccl.northwestern.edu/netlogo/5.3.1/NetLogo-5.3.1-64.tgz && \
 
 ADD ./netlogo-headless.sh $NETLOGO_HOME/
 RUN chmod 755 $NETLOGO_HOME/netlogo-headless.sh
+ADD ./run-headless.sh $NETLOGO_HOME/
+RUN chmod 755 $NETLOGO_HOME/run-headless.sh
+
+RUN chmod 777 $NETLOGO_HOME
 
 # Download NetLogo extensions:
 # R extension
@@ -95,5 +99,6 @@ RUN /usr/local/bin/install.r rJava bnlearn readr
 
 # For debugging
 #CMD ["/bin/bash"]
-
-ENTRYPOINT ["/opt/netlogo/netlogo-headless.sh"]
+#
+#ENTRYPOINT ["/opt/netlogo/netlogo-headless.sh"]
+ENTRYPOINT ["/opt/netlogo/run-headless.sh"]
