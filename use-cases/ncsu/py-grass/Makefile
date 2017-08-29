@@ -47,6 +47,7 @@ libavformat-dev libswscale-dev \
 libglu1-mesa-dev libxmu-dev \
 ghostscript \
 libmysqlclient-dev \
+libproj-dev \
 netcdf-bin libnetcdf-dev
 
 # GRASS dependency targets.
@@ -93,7 +94,7 @@ $(GDAL_CONFIG): /usr/local/src/gdal-docker
 	make -C /usr/local/src/gdal-docker install \
 	&& touch -c $(GDAL_CONFIG)
 /usr/local/src/gdal-docker: $(GIT)
-	$(GIT) clone --branch $(GDAL_VERSION) --depth 1 http://github.com/geo-data/gdal-docker /usr/local/src/gdal-docker \
+	$(GIT) clone --branch master --depth 1 http://github.com/lstillwe/gdal-docker /usr/local/src/gdal-docker \
 	&& touch -c /usr/local/src/gdal-docker
 
 /tmp/grass: $(SVN)
@@ -115,8 +116,8 @@ $(BUILD_ESSENTIAL): /tmp/apt-updated
 
 # Remove build time dependencies.
 clean:
-	make -C /usr/local/src/gdal-docker clean \
-	&& apt-get purge -y \
+	#make -C /usr/local/src/gdal-docker clean \
+	apt-get purge -y \
 		$(BUILD_PACKAGES) \
 		subversion \
 		git \
