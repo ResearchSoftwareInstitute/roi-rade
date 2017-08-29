@@ -525,7 +525,7 @@ to storm-impact
 ;;;;;;;;;;;;;give results from the XBeach runs (results.txt) as input
       r:clearLocal
       let dir pathdir:get-model
-      set filename (word dir "/" "results.txt")
+      set filename (word dir "/" "stormresults.txt")
       r:put "fn" filename
       r:eval "data <- read.table(file = fn)"
     r:eval "net <- model2network(\"[Dhin][Bwin][Dain|Dhin][deltacrest|Dhin:Bwin:Dain][Erosion|Dhin:Dain:Bwin]\")"
