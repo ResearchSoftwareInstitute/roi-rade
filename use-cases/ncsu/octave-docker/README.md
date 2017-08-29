@@ -21,3 +21,6 @@ docker container, in which case run the container with the `-v` somethink like t
 
 The octave/matlab script is responsible for any interaction with the Octave interpreter and reading files from, or writing to, the mounted volume.
 
+### Example Discovery Environment App Configuration
+Available [here](https://github.com/ResearchSoftwareInstitute/roi-rade/blob/master/docs/ncsu-octave-task-image.png)
+
