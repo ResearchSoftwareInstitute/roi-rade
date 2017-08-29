@@ -49,4 +49,4 @@ git clone git://github.com/lstillwe/roi-rade/ \
 [GRASS subversion repository](https://svn.osgeo.org/grass/grass/).
 
 ### Example Discovery Environment App Configuration
-Available [here](https://github.com/ResearchSoftwareInstitute/roi-rade/blob/master/docs/ncsu-grass-task-image.png)
+![alt text](https://github.com/ResearchSoftwareInstitute/roi-rade/blob/master/docs/ncsu-grass-task-image.png)
