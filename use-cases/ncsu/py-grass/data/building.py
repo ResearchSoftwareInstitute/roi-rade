@@ -1,4 +1,4 @@
-a# NOTE: Windows OS support not complete
+# NOTE: Windows OS support not complete
 import os
 import sys
 import subprocess
@@ -10,7 +10,7 @@ import random
 
 def usage():
 	print '\nUsage:'
-	print sys.argv[0] + ' -b <buildings_shapefile_name> -c <cells_shapefile_name> -s <shore_shapefile_name> -d <shapefile_dir_path>'
+	print sys.argv[0] + ' -b <buildings_shapefile_name> -c <cells_shapefile_name> -s <shore_shapefile_name>'
 	print ' ' 
 
 
@@ -25,7 +25,7 @@ def main(argv):
 	# look for 4 arguments:
 	# buildings, cells, shore and shapefiles dir path
 	# all shapefiles - do not add '.shp'
-	if((len(sys.argv)) < 9):
+	if((len(sys.argv)) < 7):
 		usage()
 		sys.exit(-1)
 	try:
@@ -45,13 +45,11 @@ def main(argv):
 			cells = arg
 		elif opt in ("-s"):
 			shore = arg
-		elif opt in ("-d"):
-			shp_dir = os.path.basename(arg)
 
 	#specify input and output locations
 	cwd = os.getcwd()
 	outputloc = cwd
-	inputloc = cwd + '/' + shp_dir + '/'
+	inputloc = cwd + '/'
 
 	myfile = inputloc + shore + '.shp'
 
