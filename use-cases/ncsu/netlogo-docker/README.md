@@ -9,4 +9,4 @@ Running the container for use in the Discovery Environment looks something like 
     docker run --rm -v ./sample-data\:/de-app-work -w /de-app-work -it lisastillwell/netlogo-headless --model NagsHead_bayes_storm.nlogo  --experiment Nags_bayes --spreadsheet NagsModelOut.csv 
 
 ### Example Discovery Environment App Configuration
-Available [here](https://github.com/ResearchSoftwareInstitute/roi-rade/blob/master/docs/ncsu-netlogo-task-image.png)
+![alt text](https://github.com/ResearchSoftwareInstitute/roi-rade/blob/master/docs/ncsu-netlogo-task-image.png)
