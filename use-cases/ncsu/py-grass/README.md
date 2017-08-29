@@ -38,18 +38,15 @@ GDAL, in which case clone the GRASS docker repository and edit the
 versions.  For example, the following will build GRASS 7.0.0 against GDAL 2.0.0:
 
 ```
-git clone git://github.com/geo-data/grass-docker/ \
-&& cd grass-docker \
+git clone git://github.com/lstillwe/roi-rade/ \
+&& cd use-cases/ncsu/py-grass \
 && echo "tags/release_20150220_grass_7_0_0" > grass-checkout.txt \
 && echo "2.0.0" > gdal-checkout.txt \
-&& docker build -t geodata/grass:local .
+&& docker build -t py-grass:local .
 ```
 
 `tags/release_20150220_grass_7_0_0` references a specific checkout of the
 [GRASS subversion repository](https://svn.osgeo.org/grass/grass/).
 
-If you want to include the most up-to-date
-commits then you need to build the docker image yourself locally along these
-lines:
-
-    docker build -t geodata/grass:local git://github.com/geo-data/grass-docker/
+### Example Discovery Environment App Configuration
+![alt text](https://github.com/ResearchSoftwareInstitute/roi-rade/blob/master/docs/ncsu-grass-task-image.png)
