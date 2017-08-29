@@ -47,3 +47,6 @@ git clone git://github.com/lstillwe/roi-rade/ \
 
 `tags/release_20150220_grass_7_0_0` references a specific checkout of the
 [GRASS subversion repository](https://svn.osgeo.org/grass/grass/).
+
+### Example Discovery Environment App Configuration
+Available [here](https://github.com/ResearchSoftwareInstitute/roi-rade/blob/master/docs/ncsu-grass-task-image.png)
